@@ -1,26 +1,13 @@
-import { AuthPage } from "@refinedev/core";
+import { AuthPage } from "@refinedev/antd";
+import { authCredentials } from "../../providers";
 
 export const Login = () => {
   return (
     <AuthPage
       type="login"
-      renderContent={(content) => (
-        <div>
-          <p
-            style={{
-              padding: 10,
-              color: "#004085",
-              backgroundColor: "#cce5ff",
-              borderColor: "#b8daff",
-              textAlign: "center",
-            }}
-          >
-            email: demo@refine.dev
-            <br /> password: demodemo
-          </p>
-          {content}
-        </div>
-      )}
+      formProps={{
+        initialValues: authCredentials,
+      }}
     />
   );
 };
