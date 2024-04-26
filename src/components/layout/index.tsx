@@ -1,15 +1,15 @@
-import { PropsWithChildren } from "react";
-import { Breadcrumb } from "../breadcrumb";
-import { Menu } from "../menu";
+import { ThemedLayoutV2, ThemedTitleV2 } from "@refinedev/antd";
+import Header from "./header";
 
-export const Layout: React.FC<PropsWithChildren> = ({ children }) => {
-  return (
-    <div className="layout">
-      <Menu />
-      <div className="content">
-        <Breadcrumb />
-        <div>{children}</div>
-      </div>
-    </div>
-  );
-};
+const Layout = ({ children }: React.PropsWithChildren) => {
+    return (
+        <ThemedLayoutV2
+            Header={Header}
+            Title={(titleProps) => <ThemedTitleV2 {...titleProps} text="Refine" />}
+        >
+            {children}
+        </ThemedLayoutV2>
+    )
+}
+
+export default Layout;
