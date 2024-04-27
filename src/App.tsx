@@ -15,6 +15,7 @@ import routerBindings, {
 import { Home, ForgotPassword, Login, Register } from "./pages";
 import { dataProvider, liveProvider, authProvider } from "./providers";
 import Layout from "./components/layout";
+import { resources } from "./config/resources";
 
 function App() {
   return (
@@ -28,7 +29,7 @@ function App() {
               notificationProvider={useNotificationProvider}
               routerProvider={routerBindings}
               authProvider={authProvider}
-              //resources={resources}
+              resources={resources}
               options={{
                 syncWithLocation: true,
                 warnWhenUnsavedChanges: true,
