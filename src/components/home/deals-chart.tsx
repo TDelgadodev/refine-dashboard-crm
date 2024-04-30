@@ -1,13 +1,16 @@
-import { DollarOutlined } from "@ant-design/icons";
-import { Card } from "antd";
-import { Text } from "../text";
-import { Area, AreaConfig } from "@ant-design/plots";
-import { useList } from "@refinedev/core";
-import { DASHBOARD_DEALS_CHART_QUERY } from "@/graphql/queries";
 import React from "react";
-import { mapDealsData } from "@/utilities/helpers";
+
+import { useList } from "@refinedev/core";
 import { GetFieldsFromList } from "@refinedev/nestjs-query";
+
+import { DollarOutlined } from "@ant-design/icons";
+import { Area, AreaConfig } from "@ant-design/plots";
+import { Card } from "antd";
+
+import { Text } from "../text";
 import { DashboardDealsChartQuery } from "@/graphql/types";
+import { DASHBOARD_DEALS_CHART_QUERY } from "@/graphql/queries";
+import { mapDealsData } from "@/utilities/helpers";
 
 const DealsChart = () => {
   const { data } = useList<GetFieldsFromList<DashboardDealsChartQuery>>({
@@ -59,7 +62,7 @@ const DealsChart = () => {
       return datum.state === "Won" ? "#52C41A" : "#F5222D";
     },
   };
-  
+
   return (
     <Card
       style={{ height: "100%" }}
@@ -74,7 +77,7 @@ const DealsChart = () => {
           }}
         >
           <DollarOutlined />
-          <Text size="sm" style={{ marginLeft: "0.5rem" }}>
+          <Text size="sm" style={{ marginLeft: ".5rem" }}>
             Deals
           </Text>
         </div>

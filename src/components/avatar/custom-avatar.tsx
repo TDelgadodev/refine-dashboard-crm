@@ -1,4 +1,4 @@
-import { getNameInitials } from "../../utilities";
+import { getNameInitials } from "@/utilities";
 import { Avatar as AntdAvatar, AvatarProps } from "antd";
 
 type Props = AvatarProps & {
@@ -8,7 +8,7 @@ type Props = AvatarProps & {
 const CustomAvatar = ({name, style, ...rest}: Props) => {
     return ( 
         <AntdAvatar
-            alt={name || 'John Doe'}
+            alt={"JavaScript Mastery"}
             size="small"
             style={{
                 backgroundColor: "#87D068",

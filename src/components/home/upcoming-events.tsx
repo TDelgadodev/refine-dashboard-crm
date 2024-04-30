@@ -1,13 +1,15 @@
 import { CalendarOutlined } from "@ant-design/icons";
 import { Badge, Card, List } from "antd";
+import React from "react";
 import { Text } from "../text";
-import { UpcomingEventsSkeleton } from "@/components";
+import UpcomingEventsSkeleton from "../skeleton/upcoming-events";
 import { getDate } from "@/utilities/helpers";
 import { useList } from "@refinedev/core";
 import { DASHBORAD_CALENDAR_UPCOMING_EVENTS_QUERY } from "@/graphql/queries";
 import dayjs from "dayjs";
 
 const UpcomingEvents = () => {
+
   const { data, isLoading } = useList({
     resource: "events",
     pagination: { pageSize: 5 },
@@ -94,4 +96,5 @@ const UpcomingEvents = () => {
     </Card>
   );
 };
+
 export default UpcomingEvents;

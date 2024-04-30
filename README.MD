@@ -17,19 +17,19 @@ Refine's hooks and components simplifies the development process and eliminates 
 
 ## Available Scripts
 
-### Running the development server.
+### Running the development server
 
 ```bash
     pnpm dev
 ```
 
-### Building for production.
+### Building for production
 
 ```bash
     pnpm build
 ```
 
-### Running the production server.
+### Running the production server
 
 ```bash
     pnpm start

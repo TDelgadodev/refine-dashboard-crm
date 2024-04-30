@@ -1,6 +1,7 @@
 import { totalCountVariants } from "@/constants";
 import { Card, Skeleton } from "antd";
 import { Text } from "../text";
+import React from "react";
 import { Area, AreaConfig } from "@ant-design/plots";
 
 type Type = "companies" | "contacts" | "deals";
