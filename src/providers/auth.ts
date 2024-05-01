@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { AuthBindings } from "@refinedev/core";
 
 import { API_URL, dataProvider } from "./data";
@@ -15,7 +16,7 @@ export const authProvider: AuthBindings = {
       // dataProvider.custom is used to make a custom request to the GraphQL API
       // this will call dataProvider which will go through the fetchWrapper function
       const { data } = await dataProvider.custom({
-        url: API_URL,
+        url: `${API_URL}/login`,
         method: "post",
         headers: {},
         meta: {
